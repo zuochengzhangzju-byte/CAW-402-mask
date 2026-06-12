@@ -1,0 +1,23 @@
+{
+  "name": "caw-402-mask",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "privacy": "node ./bin/privacy-adapter.js",
+    "demo:market": "node ./bin/privacy-adapter.js market",
+    "demo:nansen": "node ./bin/privacy-adapter.js nansen",
+    "demo:nansen:rail": "node ./scripts/run-nansen-rail.mjs",
+    "eval:paid-tools": "node ./scripts/evaluate-paid-tool-module.mjs",
+    "probe:x402": "node ./scripts/probe-x402-resource.mjs",
+    "doctor": "node ./bin/privacy-adapter.js doctor",
+    "prepare": "node ./bin/privacy-adapter.js prepare",
+    "legacy:search:bazaar:weather": "node ./scripts/search-bazaar.mjs weather",
+    "legacy:call:x402": "node ./scripts/call-x402-resource.cjs",
+    "legacy:curvy:onboard": "node ./scripts/curvy-local.mjs onboard",
+    "legacy:curvy:auth-server": "node ./scripts/curvy-auth-server.mjs",
+    "legacy:curvy:info": "node ./scripts/curvy-local.mjs info",
+    "legacy:curvy:balance": "node ./scripts/curvy-local.mjs balance",
+    "legacy:curvy:withdraw": "node ./scripts/curvy-local.mjs withdraw"
+  },
+  "dependencies": {}
+}

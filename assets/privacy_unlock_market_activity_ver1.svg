@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">Privacy Unlock: Activity and Transaction Volume</title>
+  <desc id="desc">Two-panel illustrative chart showing how privacy can increase both high-frequency agent activity for micro-tools and transaction volume for high-value sensitive services.</desc>
+  <defs>
+    <style>
+      .bg { fill: #fff; }
+      .title { font: 700 31px Inter, Arial, sans-serif; fill: #111827; }
+      .subtitle { font: 400 16px Inter, Arial, sans-serif; fill: #4b5563; }
+      .panelTitle { font: 700 18px Inter, Arial, sans-serif; fill: #111827; }
+      .axis { stroke: #1f2937; stroke-width: 2; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .tick { font: 12px Inter, Arial, sans-serif; fill: #6b7280; }
+      .label { font: 600 14px Inter, Arial, sans-serif; fill: #374151; }
+      .legend { font: 14px Inter, Arial, sans-serif; fill: #111827; }
+      .note { font: 13px Inter, Arial, sans-serif; fill: #4b5563; }
+      .formula { font: 600 14px Consolas, Menlo, monospace; fill: #111827; }
+      .without { fill: #cbd5e1; }
+      .with { fill: #22c55e; }
+      .callout { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1.5; rx: 12; }
+      .micro { fill: #eff6ff; stroke: #bfdbfe; rx: 10; }
+      .value { fill: #ecfdf5; stroke: #86efac; rx: 10; }
+      .divider { stroke: #e5e7eb; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1400" height="820"/>
+  <text class="title" x="70" y="56">Privacy Unlock: Activity and Transaction Volume</text>
+  <text class="subtitle" x="70" y="84">Micro-tools gain from safer high-frequency usage; high-value services gain from lower intent-leakage risk and higher willingness to transact.</text>
+
+  <!-- Shared legend -->
+  <g transform="translate(1060 46)">
+    <rect class="without" x="0" y="0" width="24" height="24" rx="5"/>
+    <text class="legend" x="34" y="18">Without privacy layer</text>
+    <rect class="with" x="0" y="36" width="24" height="24" rx="5"/>
+    <text class="legend" x="34" y="54">With privacy layer</text>
+  </g>
+
+  <!-- LEFT PANEL: Activity -->
+  <g id="activity" transform="translate(70 135)">
+    <text class="panelTitle" x="0" y="0">1. Activity uplift: high-frequency calls</text>
+    <text class="note" x="0" y="26">Activity = agent count × calls per agent × trust conversion</text>
+
+    <!-- bounds x=0 y=65 w=560 h=390 max=120 -->
+    <g transform="translate(0 65)">
+      <!-- grid y values 0,20,40,60,80,100,120 -->
+      <line class="grid" x1="55" y1="390" x2="560" y2="390"/>
+      <line class="grid" x1="55" y1="325" x2="560" y2="325"/>
+      <line class="grid" x1="55" y1="260" x2="560" y2="260"/>
+      <line class="grid" x1="55" y1="195" x2="560" y2="195"/>
+      <line class="grid" x1="55" y1="130" x2="560" y2="130"/>
+      <line class="grid" x1="55" y1="65" x2="560" y2="65"/>
+      <line class="grid" x1="55" y1="0" x2="560" y2="0"/>
+      <line class="axis" x1="55" y1="390" x2="560" y2="390"/>
+      <line class="axis" x1="55" y1="0" x2="55" y2="390"/>
+
+      <text class="tick" x="30" y="394">0</text>
+      <text class="tick" x="22" y="329">20</text>
+      <text class="tick" x="22" y="264">40</text>
+      <text class="tick" x="22" y="199">60</text>
+      <text class="tick" x="22" y="134">80</text>
+      <text class="tick" x="14" y="69">100</text>
+      <text class="tick" x="14" y="4">120</text>
+
+      <!-- scale 390/120=3.25 -->
+      <!-- micro 70/92 -->
+      <rect class="without" x="105" y="162.5" width="44" height="227.5" rx="6"/>
+      <rect class="with" x="160" y="91" width="44" height="299" rx="6"/>
+      <text class="tick" x="112" y="153">70</text>
+      <text class="tick" x="167" y="82">92</text>
+      <text class="legend" x="91" y="424">Micro tools</text>
+
+      <!-- research 38/58 -->
+      <rect class="without" x="275" y="266.5" width="44" height="123.5" rx="6"/>
+      <rect class="with" x="330" y="201.5" width="44" height="188.5" rx="6"/>
+      <text class="tick" x="282" y="257">38</text>
+      <text class="tick" x="337" y="192">58</text>
+      <text class="legend" x="248" y="424">Research/data</text>
+
+      <!-- trading 14/31 -->
+      <rect class="without" x="445" y="344.5" width="44" height="45.5" rx="6"/>
+      <rect class="with" x="500" y="289.25" width="44" height="100.75" rx="6"/>
+      <text class="tick" x="452" y="335">14</text>
+      <text class="tick" x="507" y="280">31</text>
+      <text class="legend" x="413" y="424">Trading/security</text>
+    </g>
+  </g>
+
+  <line class="divider" x1="700" y1="130" x2="700" y2="610"/>
+
+  <!-- RIGHT PANEL: Volume -->
+  <g id="volume" transform="translate(760 135)">
+    <text class="panelTitle" x="0" y="0">2. Volume uplift: high-value services</text>
+    <text class="note" x="0" y="26">Volume = activity × average ticket; privacy unlocks higher-ticket demand</text>
+
+    <!-- bounds x=0 y=65 w=560 h=390 max=160 -->
+    <g transform="translate(0 65)">
+      <!-- grid y values 0,40,80,120,160 -->
+      <line class="grid" x1="55" y1="390" x2="560" y2="390"/>
+      <line class="grid" x1="55" y1="292.5" x2="560" y2="292.5"/>
+      <line class="grid" x1="55" y1="195" x2="560" y2="195"/>
+      <line class="grid" x1="55" y1="97.5" x2="560" y2="97.5"/>
+      <line class="grid" x1="55" y1="0" x2="560" y2="0"/>
+      <line class="axis" x1="55" y1="390" x2="560" y2="390"/>
+      <line class="axis" x1="55" y1="0" x2="55" y2="390"/>
+
+      <text class="tick" x="30" y="394">0</text>
+      <text class="tick" x="22" y="297">40</text>
+      <text class="tick" x="22" y="199">80</text>
+      <text class="tick" x="14" y="102">120</text>
+      <text class="tick" x="14" y="4">160</text>
+
+      <!-- scale 390/160=2.4375 -->
+      <!-- micro 18/25 -->
+      <rect class="without" x="105" y="346.125" width="44" height="43.875" rx="6"/>
+      <rect class="with" x="160" y="329.063" width="44" height="60.938" rx="6"/>
+      <text class="tick" x="112" y="337">18</text>
+      <text class="tick" x="167" y="320">25</text>
+      <text class="legend" x="91" y="424">Micro tools</text>
+
+      <!-- research 45/82 -->
+      <rect class="without" x="275" y="280.313" width="44" height="109.688" rx="6"/>
+      <rect class="with" x="330" y="190.125" width="44" height="199.875" rx="6"/>
+      <text class="tick" x="282" y="271">45</text>
+      <text class="tick" x="337" y="181">82</text>
+      <text class="legend" x="248" y="424">Research/data</text>
+
+      <!-- trading 42/135 -->
+      <rect class="without" x="445" y="287.625" width="44" height="102.375" rx="6"/>
+      <rect class="with" x="500" y="60.938" width="44" height="329.063" rx="6"/>
+      <text class="tick" x="452" y="278">42</text>
+      <text class="tick" x="503" y="51">135</text>
+      <text class="legend" x="413" y="424">Trading/security</text>
+    </g>
+  </g>
+
+  <!-- Bottom explanation cards -->
+  <g transform="translate(70 650)">
+    <rect class="micro" x="0" y="0" width="595" height="92"/>
+    <text class="label" x="18" y="28">Micro-tools are high-frequency</text>
+    <text class="note" x="18" y="55">Even cheap calls matter because repeated interactions increase profiling risk through n and n² linkage effects.</text>
+    <text class="note" x="18" y="76">Privacy improves sustained usage and lowers long-term cross-service profiling.</text>
+  </g>
+
+  <g transform="translate(735 650)">
+    <rect class="value" x="0" y="0" width="595" height="92"/>
+    <text class="label" x="18" y="28">High-value services are sensitivity-driven</text>
+    <text class="note" x="18" y="55">Fewer calls can still create larger economic activity because ticket size and intent sensitivity are much higher.</text>
+    <text class="note" x="18" y="76">Privacy can decide whether trading, research, and security agents transact at all.</text>
+  </g>
+
+  <text class="note" x="70" y="790">Illustrative pseudo-data, not empirical market sizing. It separates activity uplift from volume uplift so high-frequency micro-tools and high-ticket sensitive services are both represented.</text>
+</svg>

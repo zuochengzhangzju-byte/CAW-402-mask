@@ -1,0 +1,23 @@
+---
+title: Privacy Unlock: Activity and Transaction Volume
+---
+xychart-beta
+    title "Activity Uplift: high-frequency micro-tools benefit from lower profiling risk"
+    x-axis "Service tier" ["Micro tools", "Research/data", "Trading/security"]
+    y-axis "Monthly activity index" 0 --> 120
+    bar "Without privacy layer" [70,38,14]
+    bar "With privacy layer" [92,58,31]
+
+---
+xychart-beta
+    title "Volume Uplift: high-value services benefit from lower intent-leakage risk"
+    x-axis "Service tier" ["Micro tools", "Research/data", "Trading/security"]
+    y-axis "Monthly volume index" 0 --> 160
+    bar "Without privacy layer" [18,45,42]
+    bar "With privacy layer" [25,82,135]
+
+%% Illustrative model, not empirical market sizing.
+%% Activity = Agent count × Calls per agent × Trust conversion.
+%% Volume = Activity × Average ticket.
+%% Micro tools: high frequency, low average ticket. Privacy improves sustained usage and reduces long-term profiling risk.
+%% High-value services: lower frequency, high ticket and high sensitivity. Privacy improves willingness-to-transact and liquidity.

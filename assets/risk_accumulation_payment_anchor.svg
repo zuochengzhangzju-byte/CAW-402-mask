@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Risk Accumulation With and Without Payment Anchor</title>
+  <desc id="desc">Illustrative chart showing that profiling risk grows faster when fragmented content signals are linked by a stable public payment wallet. A privacy payment adapter lowers linkage strength and reduces long-term aggregation speed.</desc>
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .title { font: 700 30px Inter, Arial, sans-serif; fill: #111827; }
+      .subtitle { font: 400 16px Inter, Arial, sans-serif; fill: #4b5563; }
+      .axis { stroke: #1f2937; stroke-width: 2; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .tick { font: 12px Inter, Arial, sans-serif; fill: #6b7280; }
+      .label { font: 600 15px Inter, Arial, sans-serif; fill: #374151; }
+      .legend { font: 14px Inter, Arial, sans-serif; fill: #111827; }
+      .note { font: 13px Inter, Arial, sans-serif; fill: #4b5563; }
+      .formula { font: 600 15px Consolas, Menlo, monospace; fill: #111827; }
+      .public { fill: none; stroke: #dc2626; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .privacy { fill: none; stroke: #16a34a; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .content { fill: none; stroke: #2563eb; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .threshold { fill: none; stroke: #f97316; stroke-width: 3; stroke-dasharray: 9 7; }
+      .callout { fill: #fff7ed; stroke: #fb923c; stroke-width: 1.5; rx: 10; }
+      .calloutText { font: 13px Inter, Arial, sans-serif; fill: #7c2d12; }
+      .pillPublic { fill: #fee2e2; stroke: #fecaca; }
+      .pillPrivacy { fill: #dcfce7; stroke: #bbf7d0; }
+      .pillContent { fill: #dbeafe; stroke: #bfdbfe; }
+      .pillThreshold { fill: #ffedd5; stroke: #fed7aa; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="760"/>
+
+  <text class="title" x="72" y="56">Risk Accumulation With / Without Payment Anchor</text>
+  <text class="subtitle" x="72" y="84">Payment privacy does not remove content-side leakage; it lowers the linkage strength that turns many small signals into one actionable profile.</text>
+
+  <!-- Chart bounds -->
+  <!-- left=90, top=130, width=760, height=460, x scale=63.333, y scale=4.6 -->
+  <g id="grid">
+    <line class="grid" x1="90" y1="590" x2="850" y2="590"/>
+    <line class="grid" x1="90" y1="498" x2="850" y2="498"/>
+    <line class="grid" x1="90" y1="406" x2="850" y2="406"/>
+    <line class="grid" x1="90" y1="314" x2="850" y2="314"/>
+    <line class="grid" x1="90" y1="222" x2="850" y2="222"/>
+    <line class="grid" x1="90" y1="130" x2="850" y2="130"/>
+
+    <line class="grid" x1="90" y1="130" x2="90" y2="590"/>
+    <line class="grid" x1="216.667" y1="130" x2="216.667" y2="590"/>
+    <line class="grid" x1="343.333" y1="130" x2="343.333" y2="590"/>
+    <line class="grid" x1="470" y1="130" x2="470" y2="590"/>
+    <line class="grid" x1="596.667" y1="130" x2="596.667" y2="590"/>
+    <line class="grid" x1="723.333" y1="130" x2="723.333" y2="590"/>
+    <line class="grid" x1="850" y1="130" x2="850" y2="590"/>
+  </g>
+
+  <line class="axis" x1="90" y1="590" x2="850" y2="590"/>
+  <line class="axis" x1="90" y1="130" x2="90" y2="590"/>
+
+  <!-- Y ticks -->
+  <text class="tick" x="60" y="594">0</text>
+  <text class="tick" x="52" y="502">20</text>
+  <text class="tick" x="52" y="410">40</text>
+  <text class="tick" x="52" y="318">60</text>
+  <text class="tick" x="52" y="226">80</text>
+  <text class="tick" x="45" y="134">100</text>
+
+  <!-- X ticks -->
+  <text class="tick" x="86" y="616">0</text>
+  <text class="tick" x="210" y="616">2</text>
+  <text class="tick" x="337" y="616">4</text>
+  <text class="tick" x="464" y="616">6</text>
+  <text class="tick" x="590" y="616">8</text>
+  <text class="tick" x="716" y="616">10</text>
+  <text class="tick" x="843" y="616">12</text>
+
+  <text class="label" x="340" y="650">Paid agent interactions (n)</text>
+  <text class="label" transform="translate(26 430) rotate(-90)">Actionable profiling confidence</text>
+
+  <!-- Threshold y=590 - 70*4.6 = 268 -->
+  <path class="threshold" d="M90 268 L850 268"/>
+  <text class="legend" x="674" y="258">Actionable inference threshold</text>
+
+  <!-- Lines from pseudo-data -->
+  <!-- Public: [0,2.5,6,10.5,16,22.5,30,38.5,48,58.5,70,82.5,96] -->
+  <path class="public" d="M90 590 L153.333 578.5 L216.667 562.4 L280 541.7 L343.333 516.4 L406.667 486.5 L470 452 L533.333 412.9 L596.667 369.2 L660 320.9 L723.333 268 L786.667 210.5 L850 148.4"/>
+
+  <!-- Privacy: [0,2.5,5.2,8.1,11.2,14.5,18,21.7,25.6,29.7,34,38.5,43.2] -->
+  <path class="privacy" d="M90 590 L153.333 578.5 L216.667 566.08 L280 552.74 L343.333 538.48 L406.667 523.3 L470 507.2 L533.333 490.18 L596.667 472.24 L660 453.38 L723.333 433.6 L786.667 412.9 L850 391.28"/>
+
+  <!-- Content-only: [0,2.5,5.05,7.65,10.3,13,15.75,18.55,21.4,24.3,27.25,30.25,33.3] -->
+  <path class="content" d="M90 590 L153.333 578.5 L216.667 566.77 L280 554.81 L343.333 542.62 L406.667 530.2 L470 517.55 L533.333 504.67 L596.667 491.56 L660 478.22 L723.333 464.65 L786.667 450.85 L850 436.82"/>
+
+  <!-- Endpoint dots -->
+  <circle cx="723.333" cy="268" r="5" fill="#dc2626"/>
+  <circle cx="850" cy="391.28" r="5" fill="#16a34a"/>
+  <circle cx="850" cy="436.82" r="5" fill="#2563eb"/>
+
+  <!-- Legend -->
+  <g transform="translate(880 140)">
+    <rect class="pillPublic" x="0" y="0" width="250" height="34" rx="17"/>
+    <line class="public" x1="14" y1="17" x2="54" y2="17"/>
+    <text class="legend" x="64" y="22">Content + public payment anchor</text>
+
+    <rect class="pillPrivacy" x="0" y="48" width="250" height="34" rx="17"/>
+    <line class="privacy" x1="14" y1="65" x2="54" y2="65"/>
+    <text class="legend" x="64" y="70">Content + privacy adapter</text>
+
+    <rect class="pillContent" x="0" y="96" width="250" height="34" rx="17"/>
+    <line class="content" x1="14" y1="113" x2="54" y2="113"/>
+    <text class="legend" x="64" y="118">Fragmented content only</text>
+
+    <rect class="pillThreshold" x="0" y="144" width="250" height="34" rx="17"/>
+    <line class="threshold" x1="14" y1="161" x2="54" y2="161"/>
+    <text class="legend" x="64" y="166">Inference threshold</text>
+  </g>
+
+  <!-- Formula box -->
+  <g transform="translate(880 360)">
+    <rect class="callout" x="0" y="0" width="260" height="170"/>
+    <text class="label" x="16" y="28">Reference model</text>
+    <text class="formula" x="16" y="58">Risk(n) ≈ s·n + α·L·n(n-1)/2</text>
+    <text class="note" x="16" y="88">s: base value per signal</text>
+    <text class="note" x="16" y="110">α: value of connecting signals</text>
+    <text class="note" x="16" y="132">L: linkage strength</text>
+    <text class="note" x="16" y="154">pairwise connections grow as O(n²)</text>
+  </g>
+
+  <!-- Explanation box -->
+  <g transform="translate(90 678)">
+    <text class="note" x="0" y="0">Illustrative pseudo-data, not empirical loss estimation. The adapter does not eliminate content-side leakage; it reduces L, the stable payment linkage that compounds many small signals into a durable profile.</text>
+  </g>
+</svg>

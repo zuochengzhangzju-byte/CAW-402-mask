@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="680" viewBox="0 0 1000 680" role="img" aria-labelledby="title desc">
+  <title id="title">Privacy Unlock: Activity Uplift for High-Frequency Agent Tools</title>
+  <desc id="desc">Illustrative chart showing that privacy can increase sustained activity for high-frequency micro-tools by reducing long-term profiling risk.</desc>
+  <defs>
+    <style>
+      .bg { fill: #fff; }
+      .title { font: 700 28px Inter, Arial, sans-serif; fill: #111827; }
+      .subtitle { font: 400 15px Inter, Arial, sans-serif; fill: #4b5563; }
+      .axis { stroke: #1f2937; stroke-width: 2; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .tick { font: 12px Inter, Arial, sans-serif; fill: #6b7280; }
+      .label { font: 600 14px Inter, Arial, sans-serif; fill: #374151; }
+      .legend { font: 14px Inter, Arial, sans-serif; fill: #111827; }
+      .note { font: 13px Inter, Arial, sans-serif; fill: #4b5563; }
+      .formula { font: 600 14px Consolas, Menlo, monospace; fill: #111827; }
+      .without { fill: #cbd5e1; }
+      .with { fill: #22c55e; }
+      .callout { fill: #eff6ff; stroke: #bfdbfe; stroke-width: 1.5; rx: 12; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1000" height="680"/>
+  <text class="title" x="64" y="54">Privacy Unlock: Activity Uplift</text>
+  <text class="subtitle" x="64" y="82">Micro-tools are cheap but high-frequency. Privacy reduces profiling pressure, improving sustained agent usage.</text>
+
+  <g transform="translate(690 54)">
+    <rect class="without" x="0" y="0" width="24" height="24" rx="5"/>
+    <text class="legend" x="34" y="18">Without privacy layer</text>
+    <rect class="with" x="0" y="36" width="24" height="24" rx="5"/>
+    <text class="legend" x="34" y="54">With privacy layer</text>
+  </g>
+
+  <!-- Chart bounds: left 90 top 135 width 760 height 370 max 120 -->
+  <g transform="translate(90 135)">
+    <line class="grid" x1="0" y1="370" x2="760" y2="370"/>
+    <line class="grid" x1="0" y1="308.333" x2="760" y2="308.333"/>
+    <line class="grid" x1="0" y1="246.667" x2="760" y2="246.667"/>
+    <line class="grid" x1="0" y1="185" x2="760" y2="185"/>
+    <line class="grid" x1="0" y1="123.333" x2="760" y2="123.333"/>
+    <line class="grid" x1="0" y1="61.667" x2="760" y2="61.667"/>
+    <line class="grid" x1="0" y1="0" x2="760" y2="0"/>
+    <line class="axis" x1="0" y1="370" x2="760" y2="370"/>
+    <line class="axis" x1="0" y1="0" x2="0" y2="370"/>
+
+    <text class="tick" x="-30" y="374">0</text>
+    <text class="tick" x="-38" y="312">20</text>
+    <text class="tick" x="-38" y="251">40</text>
+    <text class="tick" x="-38" y="189">60</text>
+    <text class="tick" x="-38" y="128">80</text>
+    <text class="tick" x="-46" y="66">100</text>
+    <text class="tick" x="-46" y="4">120</text>
+
+    <!-- scale 370/120=3.0833 -->
+    <rect class="without" x="120" y="154.167" width="64" height="215.833" rx="8"/>
+    <rect class="with" x="204" y="86.333" width="64" height="283.667" rx="8"/>
+    <text class="tick" x="141" y="145">70</text>
+    <text class="tick" x="225" y="77">92</text>
+    <text class="legend" x="120" y="405">Micro tools</text>
+
+    <rect class="without" x="348" y="252.833" width="64" height="117.167" rx="8"/>
+    <rect class="with" x="432" y="191.167" width="64" height="178.833" rx="8"/>
+    <text class="tick" x="369" y="244">38</text>
+    <text class="tick" x="453" y="182">58</text>
+    <text class="legend" x="335" y="405">Research/data</text>
+
+    <rect class="without" x="576" y="326.833" width="64" height="43.167" rx="8"/>
+    <rect class="with" x="660" y="274.417" width="64" height="95.583" rx="8"/>
+    <text class="tick" x="597" y="318">14</text>
+    <text class="tick" x="681" y="265">31</text>
+    <text class="legend" x="550" y="405">Trading/security</text>
+  </g>
+
+  <text class="label" x="365" y="575">Monthly activity index</text>
+
+  <g transform="translate(64 600)">
+    <rect class="callout" x="0" y="0" width="872" height="56"/>
+    <text class="formula" x="18" y="24">Activity = Agent count × Calls per agent × Trust conversion</text>
+    <text class="note" x="18" y="44">Cheap tools matter because repeated calls increase profiling risk through n and n² linkage effects.</text>
+  </g>
+</svg>
