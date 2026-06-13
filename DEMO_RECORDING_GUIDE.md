@@ -52,6 +52,44 @@ The script simulates an agent calling the product:
 4. Agent asks whether residual funds should be returned to CAW and sees the warning.
 ```
 
+## VHS Product Video
+
+Use this for a polished sub-1-minute terminal visual. It is a product video, not
+the real-spend proof path:
+
+```bash
+brew install vhs
+vhs tapes/caw-402-mask-demo.tape
+```
+
+The generated output is:
+
+```text
+assets/videos/caw-402-mask-demo.gif
+```
+
+The tape runs:
+
+```bash
+npm run demo:vhs-product
+```
+
+To check the scripted output without VHS:
+
+```bash
+npm run demo:vhs-product -- --fast
+```
+
+That scripted output shows:
+
+```text
+required local config
+local note secret vault
+budget/policy check
+Nansen x402 quote
+return:caw privacy warning
+```
+
 ## Manual Recording Commands
 
 Use these if you want to type each command yourself.

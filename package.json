@@ -8,6 +8,7 @@
     "demo:nansen": "node ./bin/privacy-adapter.js nansen",
     "demo:nansen:rail": "node ./scripts/run-nansen-rail.mjs",
     "demo:agent-recording": "node ./scripts/recording-agent-demo.mjs",
+    "demo:vhs-product": "node ./scripts/vhs-product-demo.mjs",
     "eval:paid-tools": "node ./scripts/evaluate-paid-tool-module.mjs",
     "probe:x402": "node ./scripts/probe-x402-resource.mjs",
     "doctor": "node ./bin/privacy-adapter.js doctor",

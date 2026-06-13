@@ -18,3 +18,6 @@ caw-bridge/
 px402-spike/notes/
 px402-spike/node_modules/
 *.log
+assets/videos/*.gif
+assets/videos/*.mp4
+!assets/videos/.gitkeep
