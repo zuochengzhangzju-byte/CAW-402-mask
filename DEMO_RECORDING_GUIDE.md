@@ -80,6 +80,13 @@ To check the scripted output without VHS:
 npm run demo:vhs-product -- --fast
 ```
 
+On Windows, if Homebrew/VHS is unavailable, generate a visually equivalent GIF
+with the local renderer:
+
+```powershell
+npm run demo:gif:windows
+```
+
 That scripted output shows:
 
 ```text
