@@ -29,6 +29,20 @@ From the repository root:
 npm run demo:agent-recording
 ```
 
+The opening terminal banner should highlight the production principle, not the
+demo command:
+
+```text
+Small CAW-authorized budgets are working capital for agent purchases.
+```
+
+Standalone slide assets for this line:
+
+```text
+assets/slides/caw-402-mask-core-line.pptx
+assets/slides/caw-402-mask-core-line.png
+```
+
 The script simulates an agent calling the product:
 
 ```text

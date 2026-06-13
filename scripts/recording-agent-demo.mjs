@@ -42,6 +42,18 @@ const steps = [
   },
 ];
 
+function banner(title, lines = []) {
+  const width = 92;
+  const top = `+${"-".repeat(width - 2)}+`;
+  console.log("");
+  console.log(top);
+  console.log(`| ${title.padEnd(width - 4)} |`);
+  for (const line of lines) {
+    console.log(`| ${line.padEnd(width - 4)} |`);
+  }
+  console.log(top);
+}
+
 function runStep(step, index) {
   return new Promise((resolve, reject) => {
     console.log("");
@@ -64,11 +76,27 @@ function runStep(step, index) {
   });
 }
 
-console.log("CAW-402 Mask agent recording demo");
+banner("CAW-402 MASK: PRODUCTION PRINCIPLE", [
+  "Small CAW-authorized budgets are working capital for agent purchases.",
+  "They should be spent privately on allowed x402 services or held in the note.",
+  "Returning funds to CAW is explicit reconciliation, not the privacy default.",
+]);
 console.log("Mode: dry-run only; no signing, no spending, no real private key.");
 console.log(`Platform: ${isWin ? "Windows" : process.platform}`);
 
 for (let index = 0; index < steps.length; index += 1) {
+  if (index === 2) {
+    banner("WHAT THE AGENT IS BUYING", [
+      "Nansen Smart Money netflow is a real x402 paid data service.",
+      "The demo asks for price and payment terms without spending.",
+    ]);
+  }
+  if (index === 3) {
+    banner("PRIVACY WARNING BUILT INTO THE PRODUCT", [
+      "return:caw creates a public burner-to-CAW link.",
+      "Execution requires explicit acknowledgement: --ack-return-link",
+    ]);
+  }
   await runStep(steps[index], index);
 }
 
