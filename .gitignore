@@ -6,6 +6,7 @@ node_modules/
 data/secrets/
 data/notes/
 data/recovery/
+data/recording-*/
 data/notes-caw-return/
 data/recovery-caw-return/
 data/receipts-caw-return/
